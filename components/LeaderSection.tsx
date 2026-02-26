@@ -36,17 +36,6 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Image with rotating halo rings */}
           <div className="relative h-96 md:h-full overflow-visible animate-slideInLeft">
-            {/* Outer halo — positioned outside the rounded image box */}
-            <div
-              className="absolute rounded-2xl animate-halo pointer-events-none"
-              style={{
-                inset: "-14px",
-                border: "2px solid transparent",
-                background:
-                  "linear-gradient(#0000,#0000) padding-box, conic-gradient(rgba(212,175,55,0.7), rgba(255,235,130,0.3), rgba(212,175,55,0.7) 30%, transparent 45%, transparent 55%, rgba(212,175,55,0.7) 70%, rgba(255,235,130,0.3), rgba(212,175,55,0.7)) border-box",
-                borderRadius: "1.25rem",
-              }}
-            />
             {/* Inner image container */}
             <div className="relative h-full overflow-hidden rounded-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-rose-500/20 to-pink-500/20 z-10" />
@@ -67,8 +56,8 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
             </div>
           </div>
 
-          {/* Content card with divine pulse border */}
-          <Card className="p-8 md:p-10 bg-gradient-to-br from-rose-500/10 to-pink-500/10 border-2 border-rose-500/30 shadow-lg transition-all animate-slideInRight animate-divine-pulse">
+          {/* Content card */}
+          <Card className="p-8 md:p-10 bg-gradient-to-br from-rose-500/10 to-pink-500/10 border-2 border-rose-500/30 shadow-lg transition-all animate-slideInRight">
             <div className="mb-2">
               <span className="inline-block px-4 py-2 bg-gradient-to-r from-rose-500/30 to-pink-500/30 text-rose-600 text-sm font-bold rounded-full border border-rose-500/50">
                 {language === "en" ? "Prophet & Founder" : "ነቢይ እና ስታ"}
