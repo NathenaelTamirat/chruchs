@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { MapPin } from 'lucide-react';
-import { Card } from '@/components/ui/card';
+import { MapPin } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 interface LocationProps {
-  language: 'en' | 'am';
+  language: "en" | "am";
 }
 
 export default function Location({ language }: LocationProps) {
   return (
-    <section className="py-16 md:py-24 px-4 bg-background">
+    <section className="py-16 md:py-24 px-4 bg-background scroll-fade opacity-0">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-          {language === 'en' ? 'Visit Us' : 'ማንኞን ይጎብኙ'}
+          {language === "en" ? "Visit Us" : "ማንኞን ይጎብኙ"}
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -38,10 +38,10 @@ export default function Location({ language }: LocationProps) {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-foreground mb-2">
-                    {language === 'en' ? 'Address' : 'አድራሻ'}
+                    {language === "en" ? "Address" : "አድራሻ"}
                   </h3>
                   <p className="text-foreground/70 leading-relaxed">
-                    Gospel Church
+                    Heavenly Places Blessings International Church
                     <br />
                     Addis Ababa, Ethiopia
                   </p>
@@ -51,16 +51,21 @@ export default function Location({ language }: LocationProps) {
 
             <Card className="p-6 bg-card border-accent/30">
               <h3 className="text-lg font-bold text-foreground mb-4">
-                {language === 'en' ? 'Directions' : 'አቅጣጫዎች'}
+                {language === "en" ? "Directions" : "አቅጣጫዎች"}
               </h3>
               <a
                 href="https://www.google.com/maps/search/Gospel+Church+Addis+Ababa"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors font-medium"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors font-medium hover-glow"
               >
-                {language === 'en' ? 'Get Directions' : 'አቅጣጫ ያግኙ'}
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {language === "en" ? "Get Directions" : "አቅጣጫ ያግኙ"}
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -73,9 +78,9 @@ export default function Location({ language }: LocationProps) {
 
             <Card className="p-6 bg-accent/5 border-accent/30">
               <p className="text-sm text-foreground/70">
-                {language === 'en'
-                  ? 'We welcome all visitors. Please feel free to join us for any of our services.'
-                  : 'ሁሉንም እንኩዋን ብንደነበገ ታዘብዋለን። በማንኛውም ወክትዮቻችን ተካፍል።'}
+                {language === "en"
+                  ? "We welcome all visitors. Please feel free to join us for any of our services."
+                  : "ሁሉንም እንኩዋን ብንደነበገ ታዘብዋለን። በማንኛውም ወክትዮቻችን ተካፍል።"}
               </p>
             </Card>
           </div>

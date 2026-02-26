@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Card } from '@/components/ui/card';
+import { useState, useEffect } from "react";
+import { Card } from "@/components/ui/card";
 
 interface DailyQuotesProps {
-  language: 'en' | 'am';
+  language: "en" | "am";
 }
 
 const quotes = [
@@ -37,10 +37,10 @@ export default function DailyQuotes({ language }: DailyQuotesProps) {
   }, []);
 
   return (
-    <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-emerald-500/5 via-background to-teal-500/5">
+    <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-emerald-500/5 via-background to-teal-500/5 scroll-fade opacity-0">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600 animate-fadeInDown">
-          {language === 'en' ? 'Daily Inspiration' : 'ዕለታዊ ጥቅሰት'}
+          {language === "en" ? "Daily Inspiration" : "ዕለታዊ ጥቅሰት"}
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-emerald-600 to-teal-600 mx-auto mb-12 rounded-full" />
 
@@ -59,8 +59,8 @@ export default function DailyQuotes({ language }: DailyQuotesProps) {
                 onClick={() => setCurrentQuote(index)}
                 className={`rounded-full transition-all duration-300 ${
                   index === currentQuote
-                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 w-8 h-3'
-                    : 'bg-muted w-2 h-2 hover:bg-emerald-500/50'
+                    ? "bg-gradient-to-r from-emerald-500 to-teal-500 w-8 h-3"
+                    : "bg-muted w-2 h-2 hover:bg-emerald-500/50"
                 }`}
                 aria-label={`Quote ${index + 1}`}
               />

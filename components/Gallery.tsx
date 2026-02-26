@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
+import { useState } from "react";
+import Image from "next/image";
 
 interface GalleryProps {
-  language: 'en' | 'am';
+  language: "en" | "am";
 }
 
 export default function Gallery({ language }: GalleryProps) {
@@ -12,44 +12,44 @@ export default function Gallery({ language }: GalleryProps) {
 
   const images = [
     {
-      src: '/images/worship-1.jpg',
-      alt: 'Worship Service - Congregation',
-      title: language === 'en' ? 'Sunday Worship' : 'አርብ ሰአት ወርሃ',
+      src: "/images/worship-1.jpg",
+      alt: "Worship Service - Congregation",
+      title: language === "en" ? "Sunday Worship" : "አርብ ሰአት ወርሃ",
     },
     {
-      src: '/images/worship-2.jpg',
-      alt: 'Community Prayer',
-      title: language === 'en' ? 'Prayer and Praise' : '祈りとほめたたえ',
+      src: "/images/worship-2.jpg",
+      alt: "Community Prayer",
+      title: language === "en" ? "Prayer and Praise" : "ጸሎትና ምስጋና",
     },
     {
-      src: '/images/worship-3.jpg',
-      alt: 'Gospel Teaching',
-      title: language === 'en' ? 'Gospel Message' : 'ወንጌል መልካም ዜና',
+      src: "/images/worship-3.jpg",
+      alt: "Gospel Teaching",
+      title: language === "en" ? "Gospel Message" : "ወንጌል መልካም ዜና",
     },
     {
-      src: '/images/worship-4.jpg',
-      alt: 'Community Fellowship',
-      title: language === 'en' ? 'Fellowship' : 'ጉባኤ',
+      src: "/images/worship-4.jpg",
+      alt: "Community Fellowship",
+      title: language === "en" ? "Fellowship" : "ጉባኤ",
     },
     {
-      src: '/images/worship-5.jpg',
-      alt: 'Worship Gathering',
-      title: language === 'en' ? 'Spiritual Unity' : 'መንፈሳዊ አንድነት',
+      src: "/images/worship-5.jpg",
+      alt: "Worship Gathering",
+      title: language === "en" ? "Spiritual Unity" : "መንፈሳዊ አንድነት",
     },
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-background to-background/50">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-background to-background/50 scroll-fade opacity-0">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12 text-center animate-fadeInDown">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-            {language === 'en' ? 'Our Community' : 'የእኛ ማህበረሰብ'}
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-orange-600">
+            {language === "en" ? "Our Community" : "የእኛ ማህበረሰብ"}
           </h2>
           <p className="text-muted-foreground text-lg">
-            {language === 'en'
-              ? 'Moments of worship, fellowship, and spiritual growth at Gospel Church'
-              : 'በወንጌል ቤተክርስቲያን ውስጥ ወርሃ፣ ጉባኤ እና መንፈሳዊ እድገት'}
+            {language === "en"
+              ? "Moments of worship, fellowship, and spiritual growth at Heavenly Places Blessings International Church"
+              : "በወንጌል ቤተክርስቲያን ውስጥ ወርሃ፣ ጉባኤ እና መንፈሳዊ እድገት"}
           </p>
         </div>
 
@@ -74,9 +74,7 @@ export default function Gallery({ language }: GalleryProps) {
                   <div className="text-white">
                     <h3 className="text-xl font-bold mb-2">{image.title}</h3>
                     <p className="text-sm text-gray-200">
-                      {language === 'en'
-                        ? 'Click to view'
-                        : 'ለመመልከት ጠቅ ያድርጉ'}
+                      {language === "en" ? "Click to view" : "ለመመልከት ጠቅ ያድርጉ"}
                     </p>
                   </div>
                 </div>
@@ -129,7 +127,9 @@ export default function Gallery({ language }: GalleryProps) {
                 <button
                   onClick={() =>
                     setSelectedImage(
-                      selectedImage === 0 ? images.length - 1 : selectedImage - 1
+                      selectedImage === 0
+                        ? images.length - 1
+                        : selectedImage - 1,
                     )
                   }
                   className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full transition-colors duration-200"
@@ -151,7 +151,9 @@ export default function Gallery({ language }: GalleryProps) {
                 <button
                   onClick={() =>
                     setSelectedImage(
-                      selectedImage === images.length - 1 ? 0 : selectedImage + 1
+                      selectedImage === images.length - 1
+                        ? 0
+                        : selectedImage + 1,
                     )
                   }
                   className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full transition-colors duration-200"
