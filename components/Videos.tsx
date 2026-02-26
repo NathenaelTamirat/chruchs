@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 interface Video {
   id: string;
@@ -44,9 +44,7 @@ export default function Videos({ language }: VideosProps) {
   ];
 
   // track which video indices are playing
-  const [playing, setPlaying] = useState<boolean[]>(
-    videos.map(() => false)
-  );
+  const [playing, setPlaying] = useState<boolean[]>(videos.map(() => false));
 
   const handlePlay = (index: number) => {
     setPlaying((prev) => {
@@ -95,10 +93,7 @@ export default function Videos({ language }: VideosProps) {
                       viewBox="0 0 84 84"
                     >
                       <circle cx="42" cy="42" r="42" fill="currentColor" />
-                      <polygon
-                        fill="#000"
-                        points="33,26 60,42 33,58"
-                      />
+                      <polygon fill="#000" points="33,26 60,42 33,58" />
                     </svg>
                   </button>
                 )}

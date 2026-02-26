@@ -59,7 +59,7 @@ export default function Schedule({ language }: ScheduleProps) {
 
               <div className="mt-4 pt-4 border-t border-border">
                 <p className="text-sm text-foreground/60">
-                  {language === "en" ? "East African Time" : "የጫት አፍሪካ ሰዓት"}
+                  {language === "en" ? "East African Time" : "አፍሪካ ሰዓት"}
                 </p>
               </div>
             </Card>
