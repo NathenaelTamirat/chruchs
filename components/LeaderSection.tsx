@@ -12,25 +12,63 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
   return (
     <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-background via-rose-500/5 to-secondary scroll-fade opacity-0">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-pink-600 animate-fadeInDown">
+        {/* Shimmer heading */}
+        <h2
+          className="text-4xl md:text-5xl font-bold text-center mb-4 animate-fadeInDown animate-shimmer-text"
+          style={{
+            backgroundImage:
+              "linear-gradient(90deg, #9f1239 20%, #d4af37 40%, #fef08a 50%, #d4af37 60%, #9f1239 80%)",
+            backgroundSize: "200% auto",
+          }}
+        >
           {language === "en" ? "Our Leadership" : "የእኛ መሪነት"}
         </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-rose-600 to-pink-600 mx-auto mb-12 rounded-full" />
+
+        {/* Animated gold divider */}
+        <div
+          className="w-24 h-1 mx-auto mb-12 rounded-full animate-breathe"
+          style={{
+            background:
+              "linear-gradient(90deg, #9f1239, #d4af37, #fef08a, #d4af37, #9f1239)",
+          }}
+        />
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Image */}
-          <div className="relative h-96 md:h-full overflow-hidden rounded-2xl animate-slideInLeft">
-            <div className="absolute inset-0 bg-gradient-to-br from-rose-500/20 to-pink-500/20 z-10" />
-            <Image
-              src="/images/pastor-temesgen.jpg"
-              alt="Prophet Temesgen Wogaso"
-              fill
-              className="object-cover hover:scale-105 transition-transform duration-500"
+          {/* Image with rotating halo rings */}
+          <div className="relative h-96 md:h-full overflow-visible animate-slideInLeft">
+            {/* Outer halo — positioned outside the rounded image box */}
+            <div
+              className="absolute rounded-2xl animate-halo pointer-events-none"
+              style={{
+                inset: "-14px",
+                border: "2px solid transparent",
+                background:
+                  "linear-gradient(#0000,#0000) padding-box, conic-gradient(rgba(212,175,55,0.7), rgba(255,235,130,0.3), rgba(212,175,55,0.7) 30%, transparent 45%, transparent 55%, rgba(212,175,55,0.7) 70%, rgba(255,235,130,0.3), rgba(212,175,55,0.7)) border-box",
+                borderRadius: "1.25rem",
+              }}
             />
+            {/* Inner image container */}
+            <div className="relative h-full overflow-hidden rounded-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-rose-500/20 to-pink-500/20 z-10" />
+              <Image
+                src="/images/pastor-temesgen.jpg"
+                alt="Prophet Temesgen Wogaso"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+              />
+              {/* Golden light reflection on the image */}
+              <div
+                className="absolute inset-0 pointer-events-none z-20"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(212,175,55,0.12) 0%, transparent 50%)",
+                }}
+              />
+            </div>
           </div>
 
-          {/* Content */}
-          <Card className="p-8 md:p-10 bg-gradient-to-br from-rose-500/10 to-pink-500/10 border-2 border-rose-500/30 hover:border-rose-500/60 shadow-lg hover:shadow-2xl hover:shadow-rose-500/20 transition-all animate-slideInRight">
+          {/* Content card with divine pulse border */}
+          <Card className="p-8 md:p-10 bg-gradient-to-br from-rose-500/10 to-pink-500/10 border-2 border-rose-500/30 shadow-lg transition-all animate-slideInRight animate-divine-pulse">
             <div className="mb-2">
               <span className="inline-block px-4 py-2 bg-gradient-to-r from-rose-500/30 to-pink-500/30 text-rose-600 text-sm font-bold rounded-full border border-rose-500/50">
                 {language === "en" ? "Prophet & Founder" : "ነቢይ እና ስታ"}
@@ -44,7 +82,7 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
             <p className="text-lg text-foreground/80 leading-relaxed mb-6">
               {language === "en"
                 ? `Prophet Temesgen Wogaso is the visionary founder and spiritual leader of ${CHURCH_NAME.en}. With a deep commitment to spreading the Gospel and nurturing believers, he provides prophetic guidance and pastoral care to our congregation.`
-                : "ነቢይ ተመስገን ወገሶ የወንጌል ቤተክርስቲያን ታሪካዊ ዓላማ እና መንፈሳዊ መሪ ነው። ወንጌልን መስፋት እና ሙሉ ምግባር በ ልባቸው፣ ወደ ቤተክርስቲያንም ነቢያዊ መመሪያ እና 牧ራ ሥራ ይሰጣሉ።"}
+                : "ነቢይ ተመስገን ወገሶ የወንጌል ቤተክርስቲያን ታሪካዊ ዓላማ እና መንፈሳዊ መሪ ነው። ወንጌልን መስፋት እና ሙሉ ምግባር በ ልባቸው፣ ወደ ቤተክርስቲያንም ነቢያዊ መመሪያ እና ሥራ ይሰጣሉ።"}
             </p>
 
             <p className="text-lg text-foreground/80 leading-relaxed">
@@ -53,7 +91,13 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
                 : "በውሎ ነቢያዊ መሪነት ስር፣ ቤተክርስቲያንን ሙሉ ምግባር፣ ተዋህዶ እና መንፈሳዊ ሟች የሚራመዱት። ሙሉ ምግባር በሌላ ሙሉ ዕውቀት መታጠቅ እና ሙሉ ምግባር ማህበረሰብ መገንባት ወደ ታሪካዊ ሥራ ሲሆን።"}
             </p>
 
-            <div className="mt-8 pt-8 border-t border-rose-500/30">
+            <div className="mt-8 pt-8 border-t border-yellow-500/30">
+              {/* Decorative golden sparkles row */}
+              <div className="flex gap-2 mb-4 opacity-50">
+                <span className="text-yellow-400 text-xs animate-sparkle" style={{ animationDelay: "0.0s" }}>✦</span>
+                <span className="text-yellow-300 text-xs animate-sparkle" style={{ animationDelay: "0.4s" }}>✦</span>
+                <span className="text-yellow-400 text-xs animate-sparkle" style={{ animationDelay: "0.8s" }}>✦</span>
+              </div>
               <div className="flex flex-col gap-3">
                 <div>
                   <p className="text-sm text-foreground/60 uppercase tracking-wide font-semibold">
