@@ -9,6 +9,7 @@ import Location from '@/components/Location';
 import Schedule from '@/components/Schedule';
 import SocialMedia from '@/components/SocialMedia';
 import LeaderSection from '@/components/LeaderSection';
+import Gallery from '@/components/Gallery';
 import Navigation from '@/components/Navigation';
 
 export default function Home() {
@@ -48,8 +49,15 @@ export default function Home() {
         {/* Header with Toggles */}
         <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
           <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div className="font-bold text-xl text-foreground">
-              {language === 'en' ? 'Gospel Church' : 'ወንጌል ቤተክርስቲያን'}
+            <div className="flex items-center gap-3">
+              <img
+                src="/images/church-logo.png"
+                alt="Gospel Church Logo"
+                className="w-10 h-10 object-contain"
+              />
+              <div className="font-bold text-lg text-foreground hidden sm:block">
+                {language === 'en' ? 'Gospel Church' : 'ወንጌል ቤተክርስቲያን'}
+              </div>
             </div>
 
             <div className="flex items-center gap-4">
@@ -80,6 +88,7 @@ export default function Home() {
           <DailyQuotes language={language} />
           <About language={language} />
           <Schedule language={language} />
+          <Gallery language={language} />
           <LeaderSection language={language} />
           <Location language={language} />
           <SocialMedia language={language} />

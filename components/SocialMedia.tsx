@@ -36,11 +36,12 @@ const socialLinks = [
 
 export default function SocialMedia({ language }: SocialMediaProps) {
   return (
-    <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-secondary to-background">
+    <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-orange-500/5 via-background to-yellow-500/5">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-600 animate-fadeInDown">
           {language === 'en' ? 'Connect With Us' : 'ከእኛ ጋር ያገናኙ'}
         </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-orange-600 to-yellow-600 mx-auto mb-12 rounded-full" />
         <p className="text-center text-foreground/70 mb-12 max-w-2xl mx-auto">
           {language === 'en'
             ? 'Follow us on social media for updates, messages, and community news.'
@@ -50,17 +51,24 @@ export default function SocialMedia({ language }: SocialMediaProps) {
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           {socialLinks.map((social, index) => {
             const Icon = social.icon;
+            const colors = [
+              'from-blue-500/20 to-blue-500/5 border-blue-500/30 hover:border-blue-500/60 hover:shadow-blue-500/20',
+              'from-red-500/20 to-red-500/5 border-red-500/30 hover:border-red-500/60 hover:shadow-red-500/20',
+              'from-cyan-500/20 to-cyan-500/5 border-cyan-500/30 hover:border-cyan-500/60 hover:shadow-cyan-500/20',
+              'from-orange-500/20 to-orange-500/5 border-orange-500/30 hover:border-orange-500/60 hover:shadow-orange-500/20',
+            ];
             return (
               <a
                 key={index}
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group"
+                className="group animate-scaleUp"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Card className="p-8 bg-card border-accent/30 hover:border-accent hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center h-full">
-                  <Icon className={`w-12 h-12 text-foreground/60 group-hover:scale-110 transition-transform duration-300 ${social.color}`} />
-                  <p className="mt-4 text-foreground font-semibold text-center">{social.name}</p>
+                <Card className={`p-8 bg-gradient-to-br ${colors[index]} border-2 hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-center h-full`}>
+                  <Icon className={`w-12 h-12 group-hover:scale-125 transition-transform duration-300 ${social.color}`} />
+                  <p className="mt-4 text-foreground font-bold text-center">{social.name}</p>
                 </Card>
               </a>
             );
@@ -68,9 +76,9 @@ export default function SocialMedia({ language }: SocialMediaProps) {
         </div>
 
         {/* Newsletter Signup */}
-        <Card className="p-8 md:p-12 bg-gradient-to-r from-accent/10 to-accent/5 border-accent/30">
+        <Card className="p-8 md:p-12 bg-gradient-to-r from-orange-500/20 via-yellow-500/10 to-orange-500/20 border-2 border-orange-500/30 hover:border-orange-500/60 shadow-lg hover:shadow-2xl hover:shadow-orange-500/20 transition-all animate-slideInUp">
           <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-foreground">
+            <h3 className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-600">
               {language === 'en' ? 'Stay Updated' : 'ወቅታዊ ይስሙ'}
             </h3>
             <p className="text-foreground/70 mb-6">
@@ -88,7 +96,7 @@ export default function SocialMedia({ language }: SocialMediaProps) {
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors font-semibold whitespace-nowrap"
+                className="px-6 py-3 bg-gradient-to-r from-orange-600 to-yellow-600 text-white rounded-lg hover:shadow-lg hover:shadow-orange-500/40 hover:scale-105 transition-all font-bold whitespace-nowrap"
               >
                 {language === 'en' ? 'Subscribe' : 'ይመዝገቡ'}
               </button>

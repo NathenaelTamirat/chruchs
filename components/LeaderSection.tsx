@@ -9,28 +9,30 @@ interface LeaderSectionProps {
 
 export default function LeaderSection({ language }: LeaderSectionProps) {
   return (
-    <section className="py-16 md:py-24 px-4 bg-secondary">
+    <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-background via-rose-500/5 to-secondary">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-pink-600 animate-fadeInDown">
           {language === 'en' ? 'Our Leadership' : 'የእኛ መሪነት'}
         </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-rose-600 to-pink-600 mx-auto mb-12 rounded-full" />
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Image */}
-          <div className="relative h-96 md:h-full">
+          <div className="relative h-96 md:h-full overflow-hidden rounded-2xl animate-slideInLeft">
+            <div className="absolute inset-0 bg-gradient-to-br from-rose-500/20 to-pink-500/20 z-10" />
             <Image
               src="/images/pastor-temesgen.jpg"
               alt="Prophet Temesgen Wogaso"
               fill
-              className="object-cover rounded-lg shadow-xl"
+              className="object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
 
           {/* Content */}
-          <Card className="p-8 md:p-10 bg-card border-accent/30">
+          <Card className="p-8 md:p-10 bg-gradient-to-br from-rose-500/10 to-pink-500/10 border-2 border-rose-500/30 hover:border-rose-500/60 shadow-lg hover:shadow-2xl hover:shadow-rose-500/20 transition-all animate-slideInRight">
             <div className="mb-2">
-              <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-sm font-semibold rounded-full">
-                {language === 'en' ? 'Prophet' : 'ነቢይ'}
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-rose-500/30 to-pink-500/30 text-rose-600 text-sm font-bold rounded-full border border-rose-500/50">
+                {language === 'en' ? 'Prophet & Founder' : 'ነቢይ እና ስታ'}
               </span>
             </div>
 
@@ -50,7 +52,7 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
                 : 'በውሎ ነቢያዊ መሪነት ስር፣ ቤተክርስቲያንን ሙሉ ምግባር፣ ተዋህዶ እና መንፈሳዊ ሟች የሚራመዱት። ሙሉ ምግባር በሌላ ሙሉ ዕውቀት መታጠቅ እና ሙሉ ምግባር ማህበረሰብ መገንባት ወደ ታሪካዊ ሥራ ሲሆን።'}
               </p>
 
-            <div className="mt-8 pt-8 border-t border-border">
+            <div className="mt-8 pt-8 border-t border-rose-500/30">
               <div className="flex flex-col gap-3">
                 <div>
                   <p className="text-sm text-foreground/60 uppercase tracking-wide font-semibold">

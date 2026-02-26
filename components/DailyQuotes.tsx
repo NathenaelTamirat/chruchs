@@ -37,27 +37,30 @@ export default function DailyQuotes({ language }: DailyQuotesProps) {
   }, []);
 
   return (
-    <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-background to-secondary">
+    <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-emerald-500/5 via-background to-teal-500/5">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-          {language === 'en' ? 'Daily Quote' : 'ዕለታዊ ጥቅሰት'}
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600 animate-fadeInDown">
+          {language === 'en' ? 'Daily Inspiration' : 'ዕለታዊ ጥቅሰት'}
         </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-emerald-600 to-teal-600 mx-auto mb-12 rounded-full" />
 
-        <Card className="p-8 md:p-12 border-accent/50 bg-card hover:shadow-lg transition-shadow duration-300">
+        <Card className="p-8 md:p-12 border-2 border-emerald-500/30 hover:border-emerald-500/60 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-300 animate-slideInLeft">
           <div className="text-center min-h-[200px] flex items-center justify-center">
-            <p className="text-lg md:text-xl leading-relaxed text-foreground/90 italic">
+            <p className="text-lg md:text-xl leading-relaxed text-foreground/90 italic font-light animate-fadeInUp">
               {quotes[currentQuote][language]}
             </p>
           </div>
 
           {/* Indicators */}
-          <div className="flex justify-center gap-2 mt-8">
+          <div className="flex justify-center gap-3 mt-8">
             {quotes.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentQuote(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentQuote ? 'bg-accent w-8' : 'bg-muted w-2'
+                className={`rounded-full transition-all duration-300 ${
+                  index === currentQuote
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 w-8 h-3'
+                    : 'bg-muted w-2 h-2 hover:bg-emerald-500/50'
                 }`}
                 aria-label={`Quote ${index + 1}`}
               />

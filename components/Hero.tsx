@@ -14,19 +14,29 @@ export default function Hero({ language }: HeroProps) {
       }}
     >
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-2xl mx-auto">
-        <h1 className="text-5xl md:text-6xl font-bold mb-4 text-balance">
+        {/* Church Logo */}
+        <div className="mb-8 flex justify-center animate-float">
+          <div className="animate-glow p-4 rounded-full">
+            <img
+              src="/images/church-logo.png"
+              alt="Gospel Church Logo"
+              className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-2xl"
+            />
+          </div>
+        </div>
+        <h1 className="text-5xl md:text-7xl font-bold mb-4 text-balance animate-fadeInDown">
           {language === 'en' ? 'Gospel Church' : 'ወንጌል ቤተክርስቲያን'}
         </h1>
-        <p className="text-xl md:text-2xl mb-6 font-light">
+        <p className="text-xl md:text-2xl mb-6 font-light animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           {language === 'en'
             ? 'Protestant Church & Place of Worship'
             : 'ፕሮቴስታንት ቤተክርስቲያን እና ምግባር ስፍራ'}
         </p>
-        <p className="text-lg md:text-xl leading-relaxed">
+        <p className="text-lg md:text-xl leading-relaxed animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
           {language === 'en'
             ? 'Visioned by Prophet Temesgen Wogaso, who shares the Gospel and serves as a prophet.'
             : 'ነቢይ ተመስገን ወገሶ ወንጌልን የሚያሙጥ እና እንደ ነቢይ የሚያገለግል።'}
