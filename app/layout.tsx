@@ -49,7 +49,7 @@ export default function RootLayout({
       >
         {children}
         {/* subtle rotating cross logo */}
-        <div className="fixed bottom-4 right-4 z-50 pointer-events-none animate-rotate-slow">
+        <div className="fixed bottom-4 right-4 z-50 pointer-events-none animate-flip-slow">
           <img
             src="/cross.svg"
             alt="church cross logo"

@@ -78,19 +78,26 @@
   }
 }
 
-/* slow rotation for fixed cross logo */
-@keyframes rotateSlow {
+/* slow flip animation for fixed cross logo (3D y-axis flip) */
+@keyframes flipSlow {
   from {
-    transform: rotate(0deg);
+    transform: rotateY(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotateY(360deg);
   }
 }
 
-.animate-rotate-slow {
-  animation: rotateSlow 20s linear infinite;
+.animate-flip-slow {
+  animation: flipSlow 20s linear infinite;
+  transform-style: preserve-3d;
   transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-flip-slow {
+    animation: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
