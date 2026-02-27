@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Moon, Sun, Globe, Menu, X } from "lucide-react";
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import DailyQuotes from "@/components/DailyQuotes";
 import About from "@/components/About";
@@ -98,10 +99,13 @@ export default function Home() {
                   className="absolute inset-0 rounded-full animate-divine-pulse opacity-60 pointer-events-none"
                   style={{ inset: "-3px" }}
                 />
-                <img
+                <Image
                   src="/images/church-logo.png"
                   alt="church logo"
+                  width={40}
+                  height={40}
                   className="w-8 h-8 sm:w-10 sm:h-10 object-contain relative z-10 animate-cross-glow"
+                  priority
                 />
               </div>
               {/* Church name — truncates on very small screens */}
@@ -216,11 +220,25 @@ export default function Home() {
                 <span className="text-yellow-300 text-sm animate-sparkle" style={{ animationDelay: "0.6s" }}>✦</span>
                 <span className="text-yellow-400 text-xs animate-sparkle" style={{ animationDelay: "1.2s" }}>✦</span>
               </div>
-              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">
+              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-6">
                 {language === "en"
                   ? "© 2026 Heavenly Places Blessings International Church. Visioned by Prophet Temesgen Wogaso."
                   : "© 2026 ሰማያዊ ስፍራ በረከት አለም አቀፍ ቤተ ክርስቲያን ። በነቢይ ተመስገን ወገሶ ታሪካዊ ዓላማ።"}
               </p>
+
+              <div className="mt-8 flex justify-center">
+                <a
+                  href="https://nathenaeltamiratbizuneh.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 rounded-xl backdrop-blur-sm border border-yellow-500/30 bg-accent/5 hover:bg-accent/10 hover:border-yellow-500/80 transition-all duration-300 group hover-glow relative overflow-hidden"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/0 via-yellow-500/20 to-yellow-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                  <span className="text-xs sm:text-sm text-foreground/80 font-medium tracking-wide">
+                    Developed by <span className="text-accent group-hover:text-yellow-400 transition-colors font-semibold">Nathenael tamirat</span>
+                  </span>
+                </a>
+              </div>
             </div>
           </footer>
         </main>

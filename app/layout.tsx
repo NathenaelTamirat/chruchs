@@ -5,18 +5,43 @@ import "./globals.css";
 
 import { CHURCH_NAME, META_DESCRIPTION } from "@/lib/constants";
 
-const geistSans = Geist({ subsets: ["latin", "ethiopic"] });
-const geistMono = Geist_Mono({ subsets: ["latin", "ethiopic"] });
+const geistSans = Geist({ subsets: ["latin"] });
+const geistMono = Geist_Mono({ subsets: ["latin"] });
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 
 export const metadata: Metadata = {
-  title: `${CHURCH_NAME.en} - Protestant Church & Place of Worship`,
+  metadataBase: new URL("https://heavenlyplacesblessings.com"),
+  title: `${CHURCH_NAME.en} - Protestant Church & Place of Worship in Addis Ababa`,
   description: META_DESCRIPTION.en,
-  generator: "v0.app",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
+  keywords: [
+    "Church services in Addis Ababa",
+    "Christian worship schedule",
+    "Heavenly Places Blessings Church messages",
+    "Protestant Church Addis Ababa",
+    "Prophet Temesgen Wogaso church",
+    "Ethiopian Christian worship"
+  ],
+  generator: "Next.js",
+  openGraph: {
+    title: `${CHURCH_NAME.en} - Protestant Church in Addis Ababa`,
+    description: META_DESCRIPTION.en,
+    url: "https://heavenlyplacesblessings.com", // Example URL, should be updated with real one
+    siteName: CHURCH_NAME.en,
+    images: [
+      {
+        url: "/images/church-logo.png", // Must be an absolute URL in production
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "am_ET",
+    type: "website",
   },
   icons: {
     icon: [

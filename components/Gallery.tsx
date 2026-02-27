@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 interface GalleryProps {
   language: "en" | "am";
@@ -44,18 +45,20 @@ export default function Gallery({ language }: GalleryProps) {
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer animate-scaleUp"
+              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer animate-scaleUp hover:animate-gold-glow"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => setSelectedImage(index)}
             >
               <div className="relative w-full h-52 sm:h-56 md:h-64 lg:h-72 overflow-hidden">
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6 text-left">
                   <div className="text-white">
                     <h3 className="text-base md:text-xl font-bold mb-1">{image.title}</h3>
                     <p className="text-xs md:text-sm text-gray-200">
@@ -65,7 +68,7 @@ export default function Gallery({ language }: GalleryProps) {
                 </div>
               </div>
               {/* Border Gradient on hover */}
-              <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-30 pointer-events-none transition-opacity duration-300" />
+              <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 opacity-0 group-hover:opacity-30 pointer-events-none transition-opacity duration-300" />
             </div>
           ))}
         </div>
@@ -80,9 +83,11 @@ export default function Gallery({ language }: GalleryProps) {
               className="relative w-full max-w-sm sm:max-w-2xl md:max-w-4xl max-h-[90vh] bg-black rounded-xl sm:rounded-2xl overflow-hidden animate-scaleUp"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <Image
                 src={images[selectedImage].src}
                 alt={images[selectedImage].alt}
+                width={1200}
+                height={800}
                 className="w-full h-full object-contain max-h-[80vh]"
               />
 

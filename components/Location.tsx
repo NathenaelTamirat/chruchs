@@ -35,7 +35,7 @@ export default function Location({ language }: LocationProps) {
         {/* Stacks on mobile, side-by-side on md+ */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Map — fixed height on mobile, flexible on md */}
-          <div className="rounded-xl overflow-hidden shadow-lg border border-yellow-500/20 animate-slideInLeft">
+          <div className="rounded-xl overflow-hidden shadow-lg border border-yellow-500/20 animate-slideInLeft animate-gold-glow">
             <div className="relative w-full h-64 sm:h-80 md:h-full md:min-h-[380px]">
               <iframe
                 width="100%"
@@ -53,7 +53,7 @@ export default function Location({ language }: LocationProps) {
           {/* Info cards */}
           <div className="flex flex-col justify-center gap-4 md:gap-6 animate-slideInRight">
             {/* Address */}
-            <Card className="p-5 md:p-6 bg-card border-accent/30 hover:border-yellow-500/60 hover:shadow-yellow-500/10 transition-all duration-300">
+            <Card className="p-5 md:p-6 bg-card border-accent/30 hover:border-yellow-500/60 hover:shadow-yellow-500/10 transition-all duration-300 hover:animate-gold-glow">
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="p-2 md:p-3 bg-accent/10 rounded-lg flex-shrink-0">
                   <MapPin className="w-5 h-5 md:w-6 md:h-6 text-accent" />
@@ -72,7 +72,7 @@ export default function Location({ language }: LocationProps) {
             </Card>
 
             {/* Directions */}
-            <Card className="p-5 md:p-6 bg-card border-accent/30 hover:border-yellow-500/60 hover:shadow-yellow-500/10 transition-all duration-300">
+            <Card className="p-5 md:p-6 bg-card border-accent/30 hover:border-yellow-500/60 hover:shadow-yellow-500/10 transition-all duration-300 hover:animate-gold-glow">
               <h3 className="text-base md:text-lg font-bold text-foreground mb-3 md:mb-4">
                 {language === "en" ? "Directions" : "አቅጣጫዎች"}
               </h3>
@@ -91,7 +91,7 @@ export default function Location({ language }: LocationProps) {
             </Card>
 
             {/* Welcome note */}
-            <Card className="p-5 md:p-6 bg-accent/5 border-accent/30 animate-breathe">
+            <Card className="p-5 md:p-6 bg-accent/5 border-accent/30 animate-breathe hover:animate-gold-glow">
               <p className="text-sm md:text-base text-foreground/70 leading-relaxed">
                 {language === "en"
                   ? "We welcome all visitors. Please feel free to join us for any of our services."

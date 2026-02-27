@@ -60,7 +60,7 @@ export default function Videos({ language }: VideosProps) {
           {videos.map((video, idx) => (
             <div key={video.id} className="flex flex-col gap-3">
               {/* 16:9 aspect ratio wrapper */}
-              <div className="relative w-full rounded-xl overflow-hidden shadow-lg" style={{ paddingTop: "56.25%" }}>
+              <div className="relative w-full rounded-xl overflow-hidden shadow-lg border border-transparent hover:border-yellow-500/50 transition-all duration-300 hover:animate-gold-glow" style={{ paddingTop: "56.25%" }}>
                 {playing[idx] ? (
                   <iframe
                     className="absolute inset-0 w-full h-full"

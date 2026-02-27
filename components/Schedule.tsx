@@ -64,7 +64,7 @@ export default function Schedule({ language }: ScheduleProps) {
           {schedule.map((item, index) => (
             <Card
               key={index}
-              className="p-8 bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-500/30 hover:border-yellow-500/60 hover:shadow-xl hover:shadow-yellow-500/20 transition-all duration-500 group animate-scaleUp relative overflow-hidden"
+              className="p-8 bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-500/30 hover:border-yellow-500/60 hover:shadow-xl hover:shadow-yellow-500/20 transition-all duration-500 group animate-scaleUp relative overflow-hidden hover:animate-gold-glow"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Floating sparkle stars */}

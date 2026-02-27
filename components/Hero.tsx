@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import DivineLightRays from "@/components/DivineLightRays";
 
 interface HeroProps {
@@ -35,13 +36,16 @@ export default function Hero({ language }: HeroProps) {
       <div className="relative z-10 text-center text-white px-4 sm:px-8 max-w-xs sm:max-w-xl md:max-w-2xl mx-auto">
         {/* Church Logo with dual halo rings */}
         <div className="mb-6 md:mb-8 flex justify-center animate-float">
-          <div className="relative animate-divine-pulse p-3 sm:p-4 rounded-full">
+          <div className="relative animate-divine-pulse p-3 sm:p-4 rounded-full hover:animate-gold-glow transition-all duration-300">
             <div className="halo-ring-2" />
             <div className="halo-ring" />
-            <img
+            <Image
               src="/images/church-logo.png"
-              alt="church logo"
+              alt="Heavenly Places Blessings International Church Logo"
+              width={128}
+              height={128}
               className="w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 object-contain drop-shadow-2xl animate-cross-glow relative z-10"
+              priority
             />
           </div>
         </div>

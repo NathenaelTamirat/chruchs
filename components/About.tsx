@@ -55,7 +55,7 @@ export default function About({ language }: AboutProps) {
         />
 
         {/* Main Description */}
-        <Card className="p-8 md:p-12 mb-12 bg-secondary/50 border border-blue-500/30 hover:border-yellow-500/60 shadow-lg hover:shadow-yellow-500/20 transition-all duration-500 backdrop-blur-sm animate-slideInLeft">
+        <Card className="p-8 md:p-12 mb-12 bg-secondary/50 border border-blue-500/30 hover:border-yellow-500/60 shadow-lg hover:shadow-yellow-500/20 transition-all duration-500 backdrop-blur-sm animate-slideInLeft hover:animate-gold-glow">
           {/* Decorative top — tiny gold sparkle stars */}
           <div className="flex justify-end gap-2 mb-4 opacity-60">
             <span className="text-yellow-400 text-xs animate-sparkle" style={{ animationDelay: "0.0s" }}>✦</span>
@@ -86,7 +86,7 @@ export default function About({ language }: AboutProps) {
             return (
               <Card
                 key={index}
-                className={`p-6 bg-gradient-to-br ${colors[index]} border hover:shadow-xl transition-all duration-500 animate-scaleUp group`}
+                className={`p-6 bg-gradient-to-br ${colors[index]} border hover:shadow-xl transition-all duration-500 animate-scaleUp group hover:animate-gold-glow`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex flex-col items-center text-center">

@@ -56,7 +56,7 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
           </div>
 
           {/* Content card */}
-          <Card className="p-8 md:p-10 bg-gradient-to-br from-rose-500/10 to-pink-500/10 border-2 border-rose-500/30 shadow-lg">
+          <Card className="p-8 md:p-10 bg-gradient-to-br from-rose-500/10 to-pink-500/10 border-2 border-rose-500/30 shadow-lg hover:animate-gold-glow transition-all duration-300">
             <div className="mb-2">
               <span className="inline-block px-4 py-2 bg-gradient-to-r from-rose-500/30 to-pink-500/30 text-rose-600 text-sm font-bold rounded-full border border-rose-500/50">
                 {language === "en" ? "Prophet & Founder" : "ነቢይ እና ስታ"}
