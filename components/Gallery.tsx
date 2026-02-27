@@ -11,9 +11,9 @@ export default function Gallery({ language }: GalleryProps) {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const images = [
-    { src: "/images/worship-1.jpg", alt: "Worship Service - Congregation", title: language === "en" ? "Sunday Worship" : "አርብ ሰአት ወርሃ" },
+    { src: "/images/worship-1.jpg", alt: "Worship Service - Congregation", title: language === "en" ? "Sunday Worship" : "እሁድ አምልኮ" },
     { src: "/images/worship-2.jpg", alt: "Community Prayer", title: language === "en" ? "Prayer and Praise" : "ጸሎትና ምስጋና" },
-    { src: "/images/worship-3.jpg", alt: "Gospel Teaching", title: language === "en" ? "Gospel Message" : "ወንጌል መልካም ዜና" },
+    { src: "/images/worship-3.jpg", alt: "Gospel Teaching", title: language === "en" ? "Gospel Message" : "ወንጌል ስርጭት" },
     { src: "/images/worship-4.jpg", alt: "Community Fellowship", title: language === "en" ? "Fellowship" : "ጉባኤ" },
     { src: "/images/worship-5.jpg", alt: "Worship Gathering", title: language === "en" ? "Spiritual Unity" : "መንፈሳዊ አንድነት" },
   ];
@@ -36,7 +36,7 @@ export default function Gallery({ language }: GalleryProps) {
           <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-xl md:max-w-2xl mx-auto px-2">
             {language === "en"
               ? "Moments of worship, fellowship, and spiritual growth at Heavenly Places Blessings International Church"
-              : "በወንጌል ቤተክርስቲያን ውስጥ ወርሃ፣ ጉባኤ እና መንፈሳዊ እድገት"}
+              : "የሰማያዊ ስፍራዎች በረከት አለም አቀፍ ቤተክርስቲያን የአምልኮ፣ የኅብረት፣ እና የመንፈሳዊ እድገት ጊዜያት"}
           </p>
         </div>
 

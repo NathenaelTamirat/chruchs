@@ -48,7 +48,7 @@ export default function Schedule({ language }: ScheduleProps) {
             backgroundSize: "200% auto",
           }}
         >
-          {language === "en" ? "Program Schedule" : "የክወናት ሰንጠረዥ"}
+          {language === "en" ? "Program Schedule" : "የፕሮግራም ሰዓትስ"}
         </h2>
 
         {/* Animated gold divider */}
@@ -102,7 +102,7 @@ export default function Schedule({ language }: ScheduleProps) {
 
               <div className="mt-4 pt-4 border-t border-yellow-500/20 relative z-10">
                 <p className="text-sm text-foreground/60">
-                  {language === "en" ? "East African Time" : "አፍሪካ ሰዓት"}
+                  {language === "en" ? "East African Time" : "የኢትዮጵያ ሰዓት"}
                 </p>
               </div>
             </Card>
@@ -114,7 +114,7 @@ export default function Schedule({ language }: ScheduleProps) {
           <p className="text-sm text-foreground/70 text-center">
             {language === "en"
               ? "Please check with the church for any schedule changes or special events."
-              : "ማንኛውም ጊዜ ለውጥ ወይም ልዩ ክወናቶች ላይ ቤተክርስቲያንን ያሳውቁ።"}
+              : "እባክዎ ለማንኛውም ለውጥ በሚኖርበት ጊዜ ከቤተክርስቲያናችን ጋር ያረጋግጡ።"}
           </p>
         </Card>
       </div>

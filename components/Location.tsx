@@ -20,7 +20,7 @@ export default function Location({ language }: LocationProps) {
             backgroundSize: "200% auto",
           }}
         >
-          {language === "en" ? "Visit Us" : "ማንኞን ይጎብኙ"}
+          {language === "en" ? "Visit Us" : "ይጎብኙን"}
         </h2>
 
         {/* Gold breathe divider */}
@@ -74,7 +74,7 @@ export default function Location({ language }: LocationProps) {
             {/* Directions */}
             <Card className="p-5 md:p-6 bg-card border-accent/30 hover:border-yellow-500/60 hover:shadow-yellow-500/10 transition-all duration-300 hover:animate-gold-glow">
               <h3 className="text-base md:text-lg font-bold text-foreground mb-3 md:mb-4">
-                {language === "en" ? "Directions" : "አቅጣጫዎች"}
+                {language === "en" ? "Directions" : "አቅጣጫ"}
               </h3>
               <a
                 href="https://www.google.com/maps/search/Gospel+Church+Addis+Ababa"
@@ -95,7 +95,7 @@ export default function Location({ language }: LocationProps) {
               <p className="text-sm md:text-base text-foreground/70 leading-relaxed">
                 {language === "en"
                   ? "We welcome all visitors. Please feel free to join us for any of our services."
-                  : "ሁሉንም እንኩዋን ብንደነበገ ታዘብዋለን። በማንኛውም ወክትዮቻችን ተካፍል።"}
+                  : "እንኳን ወደ ቤተክርስቲያናችን ደህና መጡ፤ በደስታ እንቀበሎታለን።"}
               </p>
             </Card>
           </div>

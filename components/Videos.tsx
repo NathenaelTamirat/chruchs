@@ -16,11 +16,11 @@ interface VideosProps {
 
 export default function Videos({ language }: VideosProps) {
   const videos: Video[] = [
-    { id: "dVa0Dh1wbBM", titleEn: "Sermon 1", titleAm: "ስርሕ 1" },
-    { id: "E2lURG_IASY", titleEn: "Sermon 2", titleAm: "ስርሕ 2" },
-    { id: "Sj1GTeoLf3Y", titleEn: "Sermon 3", titleAm: "ስርሕ 3" },
-    { id: "EuZc59ZvfH4", titleEn: "Sermon 4", titleAm: "ስርሕ 4" },
-    { id: "w7doD1RjCCg", titleEn: "Sermon 5", titleAm: "ስርሕ 5" },
+    { id: "dVa0Dh1wbBM", titleEn: "Teaching 1", titleAm: "ትምህርት 1" },
+    { id: "E2lURG_IASY", titleEn: "Worship", titleAm: "ምስጋና" },
+    { id: "Sj1GTeoLf3Y", titleEn: "Worship", titleAm: "አምልኮ" },
+    { id: "EuZc59ZvfH4", titleEn: "Healing", titleAm: "ፈውስ" },
+    { id: "w7doD1RjCCg", titleEn: "Teaching 2", titleAm: "ትምህርት 2" },
   ];
 
   const [playing, setPlaying] = useState<boolean[]>(videos.map(() => false));

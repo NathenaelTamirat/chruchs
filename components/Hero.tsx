@@ -63,7 +63,7 @@ export default function Hero({ language }: HeroProps) {
         >
           {language === "en"
             ? "Protestant Church & Place of Worship"
-            : "ፕሮቴስታንት ቤተክርስቲያን እና ምግባር ስፍራ"}
+            : "የወንጌላዊያን ቤተክርስቲያን እና አምልኮ ስፍራ"}
         </p>
 
         <p
@@ -72,7 +72,7 @@ export default function Hero({ language }: HeroProps) {
         >
           {language === "en"
             ? "Visioned by Prophet Temesgen Wogaso, who shares the Gospel and serves as a prophet."
-            : "ነቢይ ተመስገን ወገሶ ወንጌልን የሚያሙጥ እና እንደ ነቢይ የሚያገለግል።"}
+            : "በነቢይ ተመስገን ወገሶ አገልግሎት የሚመራ።"}
         </p>
 
         {/* Decorative golden divider */}

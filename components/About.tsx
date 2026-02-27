@@ -13,23 +13,23 @@ export default function About({ language }: AboutProps) {
     {
       icon: Heart,
       titleEn: "Worship",
-      titleAm: "ምግባር",
+      titleAm: "አምልኮ",
       descEn: "A place dedicated to worship and prayer",
-      descAm: "ምግባር እና ጸሎት በሚደረግበት ቦታ",
+      descAm: "የአምልኮ እና የጸሎት ቦታ",
     },
     {
       icon: BookOpen,
       titleEn: "Gospel Teaching",
       titleAm: "ወንጌል ትምህርት",
       descEn: "Sharing the message of Christ",
-      descAm: "ስለ ክርስቶስ ዜና መስፋት",
+      descAm: "ስለ ክርስቶስ መስበክ",
     },
     {
       icon: Users,
       titleEn: "Community",
       titleAm: "ማህበረሰብ",
       descEn: "Building a strong faith community",
-      descAm: "ጠንካራ ሙሉ ማህበረሰብ መገንባት",
+      descAm: "ጠንካራ የክርስቲያን ማህበረሰብ መገንባት",
     },
   ];
 
@@ -44,7 +44,7 @@ export default function About({ language }: AboutProps) {
             backgroundSize: "200% auto",
           }}
         >
-          {language === "en" ? "About Our Church" : "ስለ ቤተክርስቲያንን"}
+          {language === "en" ? "About Our Church" : "ስለ ቤተክርስቲያናችን"}
         </h2>
 
         {/* Animated golden divider */}

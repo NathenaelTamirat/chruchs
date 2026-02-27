@@ -51,7 +51,7 @@ export default function SocialMedia({ language }: SocialMediaProps) {
         <p className="text-center text-foreground/70 mb-8 md:mb-12 text-sm sm:text-base max-w-2xl mx-auto">
           {language === "en"
             ? "Follow us on social media for updates, messages, and community news."
-            : "ለወቅታዊ መረጃ፣ መልእክቶች እና ማህበረሰብ ጫዋታዎች ፌስቡክ ይከተሉ።"}
+            : "ለወቅታዊ መረጃ፣ መልእክቶች ፌስቡክ ይከተሉ።"}
         </p>
 
         {/* Social grid: handles 5 items elegantly via flex wrapping or grid cols */}

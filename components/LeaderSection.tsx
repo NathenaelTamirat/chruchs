@@ -76,7 +76,7 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
             <p className="text-lg text-foreground/80 leading-relaxed">
               {language === "en"
                 ? "Under his prophetic leadership, our church continues to grow in faith, unity, and spiritual maturity. He is dedicated to equipping believers with biblical knowledge and fostering a loving community of worshippers."
-                : "በውሎ ነቢያዊ መሪነት ስር፣ ቤተክርስቲያንን ሙሉ ምግባር፣ ተዋህዶ እና መንፈሳዊ ሟች የሚራመዱት። ሙሉ ምግባር በሌላ ሙሉ ዕውቀት መታጠቅ እና ሙሉ ምግባር ማህበረሰብ መገንባት ወደ ታሪካዊ ሥራ ሲሆን።"}
+                : "ቤተክርስቲያናችን በእምነት፣ በኅብረት እና በመንፈሳዊ እድገት የተመሰረተች ናት።"}
             </p>
 
             <div className="mt-8 pt-8 border-t border-yellow-500/30">
@@ -94,17 +94,17 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
                   <p className="text-lg text-foreground">
                     {language === "en"
                       ? "Founder & Spiritual Leader"
-                      : "ስታ ተቋቋም እና መንፈሳዊ መሪ"}
+                      : "ነቢይ እና መንፈሳዊ መሪ"}
                   </p>
                 </div>
                 <div>
                   <p className="text-sm text-foreground/60 uppercase tracking-wide font-semibold">
-                    {language === "en" ? "Mission" : "ታሪካዊ ሥራ"}
+                    {language === "en" ? "Mission" : "ተልኮዐዊ ሥራ"}
                   </p>
                   <p className="text-lg text-foreground">
                     {language === "en"
                       ? "Sharing the Gospel & Spiritual Growth"
-                      : "ወንጌል መስፋት እና መንፈሳዊ ሟች"}
+                      : "የወንጌል መስፋፋት እና መንፈሳዊ እድገት"}
                   </p>
                 </div>
               </div>
