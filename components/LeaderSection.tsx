@@ -12,21 +12,20 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
   return (
     <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-background via-rose-500/5 to-secondary scroll-fade opacity-0">
       <div className="max-w-5xl mx-auto">
-        {/* Shimmer heading */}
+        {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-center mb-4 animate-fadeInDown animate-shimmer-text"
+          className="text-4xl md:text-5xl font-bold text-center mb-4 text-transparent bg-clip-text"
           style={{
             backgroundImage:
               "linear-gradient(90deg, #9f1239 20%, #d4af37 40%, #fef08a 50%, #d4af37 60%, #9f1239 80%)",
-            backgroundSize: "200% auto",
           }}
         >
           {language === "en" ? "Our Leadership" : "የእኛ መሪነት"}
         </h2>
 
-        {/* Animated gold divider */}
+        {/* Gold divider */}
         <div
-          className="w-24 h-1 mx-auto mb-12 rounded-full animate-breathe"
+          className="w-24 h-1 mx-auto mb-12 rounded-full"
           style={{
             background:
               "linear-gradient(90deg, #9f1239, #d4af37, #fef08a, #d4af37, #9f1239)",
@@ -34,8 +33,8 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
         />
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Image with rotating halo rings */}
-          <div className="relative h-96 md:h-full overflow-visible animate-slideInLeft">
+          {/* Image */}
+          <div className="relative h-96 md:h-full overflow-visible">
             {/* Inner image container */}
             <div className="relative h-full overflow-hidden rounded-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-rose-500/20 to-pink-500/20 z-10" />
@@ -43,7 +42,7 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
                 src="/images/pastor-temesgen.jpg"
                 alt="Prophet Temesgen Wogaso"
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
+                className="object-cover"
               />
               {/* Golden light reflection on the image */}
               <div
@@ -57,7 +56,7 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
           </div>
 
           {/* Content card */}
-          <Card className="p-8 md:p-10 bg-gradient-to-br from-rose-500/10 to-pink-500/10 border-2 border-rose-500/30 shadow-lg transition-all animate-slideInRight">
+          <Card className="p-8 md:p-10 bg-gradient-to-br from-rose-500/10 to-pink-500/10 border-2 border-rose-500/30 shadow-lg">
             <div className="mb-2">
               <span className="inline-block px-4 py-2 bg-gradient-to-r from-rose-500/30 to-pink-500/30 text-rose-600 text-sm font-bold rounded-full border border-rose-500/50">
                 {language === "en" ? "Prophet & Founder" : "ነቢይ እና ስታ"}
@@ -83,9 +82,9 @@ export default function LeaderSection({ language }: LeaderSectionProps) {
             <div className="mt-8 pt-8 border-t border-yellow-500/30">
               {/* Decorative golden sparkles row */}
               <div className="flex gap-2 mb-4 opacity-50">
-                <span className="text-yellow-400 text-xs animate-sparkle" style={{ animationDelay: "0.0s" }}>✦</span>
-                <span className="text-yellow-300 text-xs animate-sparkle" style={{ animationDelay: "0.4s" }}>✦</span>
-                <span className="text-yellow-400 text-xs animate-sparkle" style={{ animationDelay: "0.8s" }}>✦</span>
+                <span className="text-yellow-400 text-xs">✦</span>
+                <span className="text-yellow-300 text-xs">✦</span>
+                <span className="text-yellow-400 text-xs">✦</span>
               </div>
               <div className="flex flex-col gap-3">
                 <div>

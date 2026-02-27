@@ -1,7 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { Facebook, Youtube } from "lucide-react";
+import { Facebook, Youtube, Mail } from "lucide-react";
 
 interface SocialMediaProps {
   language: "en" | "am";
@@ -24,6 +24,7 @@ const socialLinks = [
   { name: "Instagram", icon: InstagramIcon, url: "https://www.instagram.com/prophettemesgen", color: "text-pink-500" },
   { name: "TikTok", icon: TikTokIcon, url: "https://www.tiktok.com/@temesgenamilake50", color: "text-black dark:text-white" },
   { name: "YouTube", icon: Youtube, url: "https://youtube.com/@prophettemesgenwogaso", color: "text-red-600" },
+  { name: "Email", icon: Mail, url: "mailto:prophettemu2023@gmail.com", color: "text-red-500" },
 ];
 
 export default function SocialMedia({ language }: SocialMediaProps) {
@@ -53,8 +54,8 @@ export default function SocialMedia({ language }: SocialMediaProps) {
             : "ለወቅታዊ መረጃ፣ መልእክቶች እና ማህበረሰብ ጫዋታዎች ፌስቡክ ይከተሉ።"}
         </p>
 
-        {/* Social grid: 2×2 on xs/sm, 4 on md+ */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
+        {/* Social grid: handles 5 items elegantly via flex wrapping or grid cols */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mb-8 md:mb-12">
           {socialLinks.map((social, index) => {
             const Icon = social.icon;
             const colors = [
@@ -62,6 +63,7 @@ export default function SocialMedia({ language }: SocialMediaProps) {
               "from-pink-500/20 to-pink-500/5 border-pink-500/30 hover:border-pink-500/60 hover:shadow-pink-500/20",
               "from-cyan-500/20 to-cyan-500/5 border-cyan-500/30 hover:border-cyan-500/60 hover:shadow-cyan-500/20",
               "from-orange-500/20 to-orange-500/5 border-orange-500/30 hover:border-orange-500/60 hover:shadow-orange-500/20",
+              "from-red-500/20 to-red-500/5 border-red-500/30 hover:border-red-500/60 hover:shadow-red-500/20",
             ];
             return (
               <a
