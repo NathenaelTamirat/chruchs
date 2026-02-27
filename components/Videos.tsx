@@ -45,7 +45,7 @@ export default function Videos({ language }: VideosProps) {
             backgroundSize: "200% auto",
           }}
         >
-          {language === "en" ? "Sermons & Media" : "ስርሕና ሚዲያ"}
+          {language === "en" ? "Sermons & Media" : "የተቀረጸ ሚዲያ"}
         </h2>
         <div
           className="w-24 h-1 mx-auto mb-8 md:mb-12 rounded-full animate-breathe"

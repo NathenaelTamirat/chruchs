@@ -72,7 +72,7 @@ export default function DailyQuotes({ language }: DailyQuotesProps) {
             backgroundSize: "200% auto",
           }}
         >
-          {language === "en" ? "Daily Inspiration" : "ዕለታዊ ጥቅሰት"}
+          {language === "en" ? "Daily Inspiration" : "ዕለታዊ ጥቅስ"}
         </h2>
 
         {/* Animated gold divider */}

@@ -18,13 +18,13 @@ const schedule = [
     dayEn: "Wednesday",
     dayAm: "ሮብ",
     timeEn: "4:00 PM - 9:00 PM (EAT)",
-    timeAm: "4:00 PM - 9:00 PM (EAT)",
+    timeAm: "10፡00 ከረፋዱ - 3፡00 ሰአት ከምሽቱ",
   },
   {
     dayEn: "Saturday",
     dayAm: "ቅዳሜ",
     timeEn: "4:00 PM - 9:00 PM (EAT)",
-    timeAm: "4:00 PM - 9:00 PM (EAT)",
+    timeAm: "10፡00 ከረፋዱ - 3፡00 ሰአት ከምሽቱ",
   },
 ];
 

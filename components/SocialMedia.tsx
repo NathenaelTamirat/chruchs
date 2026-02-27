@@ -40,7 +40,7 @@ export default function SocialMedia({ language }: SocialMediaProps) {
             backgroundSize: "200% auto",
           }}
         >
-          {language === "en" ? "Connect With Us" : "ከእኛ ጋር ያገናኙ"}
+          {language === "en" ? "Connect With Us" : "ከእኛ ጋር ይገናኙ"}
         </h2>
 
         <div
@@ -96,7 +96,7 @@ export default function SocialMedia({ language }: SocialMediaProps) {
             <p className="text-foreground/70 mb-5 md:mb-6 text-sm sm:text-base">
               {language === "en"
                 ? "Subscribe to our newsletter for weekly messages and updates."
-                : "ለ ሳምንታዊ መልእክቶች እና ወቅታዊ መረጃ ይመዝገቡ።"}
+                : "ለሳምንታዊ መልእክቶች እና ወቅታዊ መረጃ ይመዝገቡ።"}
             </p>
             <form className="flex flex-col sm:flex-row gap-3">
               <input

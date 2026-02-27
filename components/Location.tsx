@@ -2,6 +2,7 @@
 
 import { MapPin, Phone } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { CHURCH_NAME } from "@/lib/constants";
 
 interface LocationProps {
   language: "en" | "am";
@@ -41,7 +42,7 @@ export default function Location({ language }: LocationProps) {
                 width="100%"
                 height="100%"
                 frameBorder="0"
-                title="Church Location"
+                title={language === "en" ? "Church Location" : "የቤተክርስቲያን አድራሻ"}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.7066379283427!2d38.74889!3d9.03!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDEnNDguMCJOIDM4wrA0NCc1My43IkU!5e0!3m2!1sen!2set!4v1234567890"
                 className="absolute inset-0 w-full h-full"
                 allowFullScreen={true}
@@ -63,9 +64,9 @@ export default function Location({ language }: LocationProps) {
                     {language === "en" ? "Address" : "አድራሻ"}
                   </h3>
                   <p className="text-foreground/70 leading-relaxed text-sm md:text-base">
-                    Heavenly Places Blessings International Church
+                    {language === "en" ? CHURCH_NAME.en : CHURCH_NAME.am}
                     <br />
-                    Addis Ababa, Ethiopia
+                    {language === "en" ? "Addis Ababa, Ethiopia" : "አዲስ አበባ፣ ኢትዮጵያ"}
                   </p>
                 </div>
               </div>

@@ -13,6 +13,7 @@ import LeaderSection from "@/components/LeaderSection";
 import Gallery from "@/components/Gallery";
 import Videos from "@/components/Videos";
 import HeavenlyParticles from "@/components/HeavenlyParticles";
+import { CHURCH_NAME } from "@/lib/constants";
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
@@ -110,9 +111,7 @@ export default function Home() {
               </div>
               {/* Church name — truncates on very small screens */}
               <div className="font-bold text-sm sm:text-base md:text-lg text-foreground truncate max-w-[140px] xs:max-w-[180px] sm:max-w-none">
-                {language === "en"
-                  ? "Heavenly Places Blessings International Church"
-                  : "ሰማያዊ ስፍራ በረከት አለም አቀፍ ቤተ ክርስቲያን"}
+                {language === "en" ? CHURCH_NAME.en : CHURCH_NAME.am}
               </div>
             </div>
 
@@ -165,13 +164,13 @@ export default function Home() {
           {mobileMenuOpen && (
             <div className="sm:hidden bg-background/95 backdrop-blur-md border-t border-border px-4 py-3 flex flex-col gap-2 animate-fadeInDown">
               {[
-                { href: "#about", labelEn: "About", labelAm: "ስለ ቤተ" },
-                { href: "#schedule", labelEn: "Schedule", labelAm: "ሰንጠረዥ" },
-                { href: "#gallery", labelEn: "Gallery", labelAm: "ምስሎች" },
-                { href: "#videos", labelEn: "Sermons", labelAm: "ስርሕ" },
-                { href: "#leader", labelEn: "Leadership", labelAm: "መሪነት" },
-                { href: "#location", labelEn: "Visit Us", labelAm: "ጉብኝት" },
-                { href: "#connect", labelEn: "Connect", labelAm: "ያገናኙ" },
+                { href: "#about", labelEn: "About Us", labelAm: "ስለ ቤተክርስቲያናችን" },
+                { href: "#schedule", labelEn: "Schedule", labelAm: "የፕሮግራም ሰዓት" },
+                { href: "#gallery", labelEn: "Community", labelAm: "የእኛ ማህበረሰብ" },
+                { href: "#videos", labelEn: "Media", labelAm: "የተቀረጸ ሚዲያ" },
+                { href: "#leader", labelEn: "Leadership", labelAm: "የእኛ መሪነት" },
+                { href: "#location", labelEn: "Visit Us", labelAm: "ይጎብኙን" },
+                { href: "#connect", labelEn: "Connect", labelAm: "ያግኙን" },
               ].map((item) => (
                 <a
                   key={item.href}
@@ -222,8 +221,8 @@ export default function Home() {
               </div>
               <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-6">
                 {language === "en"
-                  ? "© 2026 Heavenly Places Blessings International Church. Visioned by Prophet Temesgen Wogaso."
-                  : "© 2026 ሰማያዊ ስፍራ በረከት አለም አቀፍ ቤተ ክርስቲያን ። በነቢይ ተመስገን ወገሶ ታሪካዊ ዓላማ።"}
+                  ? `© 2026 ${CHURCH_NAME.en}. Visioned by Prophet Temesgen Wogaso.`
+                  : `© 2026 ${CHURCH_NAME.am} ። በነቢይ ተመስገን ወገሶ ታሪካዊ ዓላማ።`}
               </p>
 
               <div className="mt-8 flex justify-center">

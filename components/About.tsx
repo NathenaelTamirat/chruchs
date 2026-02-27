@@ -65,12 +65,12 @@ export default function About({ language }: AboutProps) {
           <p className="text-lg text-foreground/90 leading-relaxed mb-6">
             {language === "en"
               ? `${CHURCH_NAME.en} is a Protestant church dedicated to the worship of God and the sharing of the Gospel of Jesus Christ. Founded and visioned by Prophet Temesgen Wogaso, our church serves as a beacon of faith, hope, and spiritual growth for our community.`
-              : "ሰማያዊ ስፍራ በረከት አለም አቀፍ ቤተ ክርስቲያን የእግዚአብሔር ምግባር እና ስለ ለየሱስ ክርስቶስ ወንጌል መስፋት የሚታከል ፕሮቴስታንት ቤተክርስቲያን ነው። ነቢይ ተመስገን ወገሶ በመምራት፣ ቤተክርስቲያንን ሙሉ ስር ፀሎት እና ሙሉ ምግባር ቦታ አድርጋታለ።"}
+              : "ሰማያዊ ስፍራ በረከት አለም አቀፍ ቤተ ክርስቲያን ስለ ለየሱስ ክርስቶስ ወንጌል መስፋት የሚታከል የወንጌል አማኞች ቤተክርስቲያን ነው። ብነቢይ ተመስገን ወገሶ በመምራት፣ ቤተክርስቲያንን ሙሉ ስር ፀሎት እና አምልኮ የሚፈፀምባት ቦታ ናት።"}
           </p>
           <p className="text-lg text-foreground/90 leading-relaxed">
             {language === "en"
               ? "Under the prophetic vision and leadership of Prophet Temesgen Wogaso, we are committed to spreading the Gospel, fostering spiritual growth, and building a compassionate community of believers."
-              : "በነቢይ ተመስገን ወገሶ ታሪካዊ ዓላማ ስር፣ እኛ ወንጌልን መስፋት፣ ሙሉ ምግባር መልካም አሠናውት እና ተስፋ ሙሉ ማህበረሰብ መገንባት ለመቆም ተጠርተናል።"}
+              : "በነቢይ ተመስገን ወገሶ ተልዕኮና ዓላማ ስር፣ እኛ ወንጌልን ማስፋፋት፣ ሙሉ ማህበረሰብ መገንባት ለመቆም ተጠርተናል።"}
           </p>
         </Card>
 
